@@ -45,7 +45,7 @@ def process_video():
                 return None
 
         youtube_url = video_id
-        # Example usage
+        # Example usage for captions
         captions_string = get_youtube_captions(youtube_url)
 
         response_data = {'message': 'Captions retrieved successfully'}
@@ -80,6 +80,3 @@ def process_output():
     
     except Exception as e:
         return jsonify({'error': str(e)})
-    
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
